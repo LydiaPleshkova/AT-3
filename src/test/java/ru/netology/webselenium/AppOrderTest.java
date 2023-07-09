@@ -7,11 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -40,8 +37,7 @@ class AppOrderTest {
     }
 
     @Test
-    public void shouldTest() throws InterruptedException {
-        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+    public void shouldTest() {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иванова Ольга");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+71234567890");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
